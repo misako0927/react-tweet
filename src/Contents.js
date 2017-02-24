@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 
 class Contents extends Component {
   render() {
-    const tweetNum = [1,2,3,4,5]
-    const tweetList = tweetNum.map((num) =>
-      <Tweet key={num.toString()} tweetNum={num} />
+    const tweetList = this.props.tweets.map((tweet, idx) =>
+      <Tweet key={idx.toString()} tweet={tweet} />
     )
     return(
       <div className="tweet-contents">
@@ -18,7 +17,8 @@ class Tweet extends Component {
   render() {
     return(
       <div className="tweet">
-        <p>Tweet{this.props.tweetNum} something</p>
+        <p>{this.props.tweet.name}</p>
+        <p>{this.props.tweet.tweet}</p>
       </div>
     )
   }
