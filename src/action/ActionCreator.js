@@ -6,4 +6,7 @@ export default class ActionCreator {
   addTweet(data) {
     this.dispatcher.emit("addTweet", data)
   }
+  openDialog(data){
+    this.dispatcher.emit("openDialog", data)
+  }
 }
