@@ -34,10 +34,10 @@ class Contents extends Component {
     action.addTweet({count: this.state.count + 1, name: `user${this.state.count}`, tweet: `This is my ${this.state.count} tweet`})
   }
   openDialog(){
-    action.openDialog({modalIsOpen: true})
+    action.openDialog(true)
   }
   closeDialog(){
-    action.closeDialog({modalIsOpen: false})
+    action.closeDialog(false)
   }
   render() {
     const tweetList = this.state.tweets.map((tweet, idx) =>

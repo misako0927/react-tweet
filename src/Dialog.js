@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Dialog.css'
 
 class Dialog extends Component {
   constructor(props){
@@ -6,10 +7,12 @@ class Dialog extends Component {
     this.state = {isOpen: false}
   }
   render(){
-    if(this.state.isOpen){
+    if(this.props.isOpen){
       return(
-        <div>
-          This is dialog!!
+        <div className="dialog">
+          <div className="dialog-wrapper">
+            This is dialog!!
+          </div>
         </div>
       )
     } else {
