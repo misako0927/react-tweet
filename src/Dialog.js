@@ -12,6 +12,7 @@ class Dialog extends Component {
         <div className="dialog">
           <div className="dialog-wrapper">
             This is dialog!!
+            <button onClick={this.props.closeDialog}>Close Dialog</button>
           </div>
         </div>
       )

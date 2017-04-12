@@ -45,7 +45,7 @@ class Contents extends Component {
     )
     return(
       <div>
-        <Dialog isOpen={this.state.modalIsOpen} />
+        <Dialog isOpen={this.state.modalIsOpen} closeDialog={this.closeDialog} />
         <div className="tweet-contents">
           {tweetList}
         </div>

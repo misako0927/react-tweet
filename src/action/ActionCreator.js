@@ -9,4 +9,7 @@ export default class ActionCreator {
   openDialog(data){
     this.dispatcher.emit("openDialog", data)
   }
+  closeDialog(data){
+    this.dispatcher.emit("closeDialog", data)
+  }
 }

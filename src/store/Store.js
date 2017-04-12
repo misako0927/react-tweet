@@ -7,6 +7,7 @@ export default class Store extends Emitter {
     this.tweets = []
     dispatcher.on("addTweet", this.onAddTweet.bind(this))
     dispatcher.on("openDialog", this.onChangeDialog.bind(this))
+    dispatcher.on("closeDialog", this.onChangeDialog.bind(this))
   }
   getCount(){
     return this.count
