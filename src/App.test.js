@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-import { shallow } from 'enzyme'
 import renderer from 'react-test-renderer'
+import { createRenderer } from 'react-test-renderer/shallow'
 
 it('renders without crashing', () => {
   const div = document.createElement('div')
@@ -13,7 +13,8 @@ it('renders correctly', () => {
   expect(tree).toMatchSnapshot()
 })
 it('renders with shallow', () => {
-  const wrapper = shallow(<App />)
+  const shallow = createRenderer()
+  shallow.render(<App />)
   const code = <code>src/App.js</code>
-  expect(wrapper.contains(code)).toEqual(true)
+  expect(shallow.getRenderOutput().type).toEqual('div')
 })

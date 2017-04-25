@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './Dialog.css'
+import PropTypes from 'prop-types'
 
 class Dialog extends Component {
   constructor(props){
@@ -14,6 +15,11 @@ class Dialog extends Component {
       </dialog>
     )
   } 
+}
+
+Dialog.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  closeDialog: PropTypes.func.isRequired
 }
 
 export default Dialog

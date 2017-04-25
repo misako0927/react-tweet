@@ -3,6 +3,7 @@ import ActionCreator from './action/ActionCreator'
 import Store from './store/Store'
 import EventEmitter from './store/EventEmitter'
 import Dialog from './Dialog'
+import PropTypes from 'prop-types'
 
 let dispatcher = new EventEmitter()
 let action = new ActionCreator(dispatcher)
@@ -69,4 +70,10 @@ class Tweet extends Component {
   }
 }
 
+Tweet.PropTypes = {
+  tweet: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    tweet: PropTypes.string.isRequired
+  })
+}
 export default Contents
