@@ -7,18 +7,12 @@ class Dialog extends Component {
     this.state = {isOpen: false}
   }
   render(){
-    if(this.props.isOpen){
-      return(
-        <div className="dialog">
-          <div className="dialog-wrapper">
-            This is dialog!!
-            <button onClick={this.props.closeDialog}>Close Dialog</button>
-          </div>
-        </div>
-      )
-    } else {
-      return false
-    }
+    return(
+      <dialog open={this.props.isOpen}>
+        <label>todo</label><input type='text' />
+        <button onClick={this.props.closeDialog}>Close Dialog</button>
+      </dialog>
+    )
   } 
 }
 

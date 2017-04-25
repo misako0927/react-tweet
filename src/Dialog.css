@@ -9,7 +9,7 @@
   text-align: center;
 }
 
-.dialog-wrapper {
+dialog {
   position: relative;
   width: 500px;
   height: 800px;

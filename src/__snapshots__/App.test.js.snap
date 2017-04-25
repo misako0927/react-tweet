@@ -20,12 +20,28 @@ exports[`test renders correctly 1`] = `
      and save to reload.
   </p>
   <div>
+    <dialog
+      open={false}>
+      <label>
+        todo
+      </label>
+      <input
+        type="text" />
+      <button
+        onClick={[Function]}>
+        Close Dialog
+      </button>
+    </dialog>
     <div
       className="tweet-contents" />
     <div>
       <button
         onClick={[Function]}>
         Please Click
+      </button>
+      <button
+        onClick={[Function]}>
+        Open Dialog
       </button>
     </div>
   </div>
