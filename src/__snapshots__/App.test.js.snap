@@ -20,8 +20,7 @@ exports[`test renders correctly 1`] = `
      and save to reload.
   </p>
   <div>
-    <dialog
-      open={false}>
+    <dialog>
       <label>
         todo
       </label>
