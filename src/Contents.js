@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ActionCreator from './action/ActionCreator'
 import Store from './store/Store'
 import EventEmitter from './store/EventEmitter'
-import Dialog from './Dialog'
+import TodoAddDialog from './TodoAddDialog'
 import PropTypes from 'prop-types'
 
 let dispatcher = new EventEmitter()
@@ -46,13 +46,12 @@ class Contents extends Component {
     )
     return(
       <div>
-        <Dialog isOpen={this.state.modalIsOpen} closeDialog={this.closeDialog} />
+        <TodoAddDialog isOpen={this.state.modalIsOpen} openDialog={this.openDialog} closeDialog={this.closeDialog} />
         <div className="tweet-contents">
           {tweetList}
         </div>
         <div>
           <button onClick={this.addTweet.bind(this)}>Please Click</button>
-          <button onClick={this.openDialog.bind(this)}>Open Dialog</button>
         </div>
       </div>
     )
